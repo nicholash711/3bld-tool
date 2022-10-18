@@ -11,8 +11,6 @@ immediately followed by solving the cube with a blindfold on, known as the the
 One of the main problems of this event is large amount of memorization required
 and being able to memorize the cube in a timely manner. 
 
----
-
 ## How Memorization Works
 
 Corner and edge pieces are memorized separately, and each part gets a letter label
@@ -23,8 +21,6 @@ from A to X. Most labeling schemes follow something like this:
 <sub> Some lettering schemes go from the up to left face instead of up to front.</sub>
 
 For a more in-depth look in how 3BLD works, reference this [link](https://www.speedcubereview.com/blind-solving-algorithms.html).
-
----
 
 ## The Tool
 
