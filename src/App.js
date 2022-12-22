@@ -1,10 +1,10 @@
 import "./App.css";
-import Tab1 from "./components/Tabs/Tab1";
+import TabMaster from "./components/tabs/TabMaster"
 
 function App() {
   return (
     <div>
-      <Tab1 />
+      <TabMaster />
     </div>
   );
 }
