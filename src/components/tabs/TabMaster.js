@@ -1,18 +1,36 @@
-import React, { useState } from "react";
-import Tab1 from "./Tab1";
+import React from "react";
+import Tab from "./Tab";
+import { Container } from "./styles/Container.styled";
 import "./TabMaster.css";
 
-function TabMaster() {
-  const [active, setActive] = useState(1);
+const tabs = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"];
 
-  return (
-    <div>
-      <ul>
-        <li>Tab1</li>
-        <li>Tab2</li>
-      </ul>
-    </div>
-  );
+export default class TabMaster extends React.Component {
+  handleClick = (tab) => {
+    this.setState({ active: tab });
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = { active: tabs[0] };
+  }
+
+  render() {
+    return (
+      <div>
+        <Container>
+          {tabs.map((tab) => (
+            <Tab
+              name={tab}
+              active={this.state.active === tab}
+              onClick={() => {
+                this.handleClick(tab);
+              }}
+            />
+          ))}
+        </Container>
+        <div className="Content">This is {this.state.active}</div>
+      </div>
+    );
+  }
 }
-
-export default TabMaster;
