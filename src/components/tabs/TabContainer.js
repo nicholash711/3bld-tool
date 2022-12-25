@@ -7,7 +7,7 @@ export default function TabContainer({ setCurTab }) {
     { name: "Practice", key: 0 },
     { name: "Memorization", key: 1 },
     { name: "Input", key: 2 },
-    { name: "Tab 4", key: 3 },
+    { name: "Options", key: 3 },
   ];
 
   const handleClick = (tab) => {
