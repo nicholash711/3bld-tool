@@ -4,7 +4,7 @@ import "./Tab.css";
 
 export default function Tab(props) {
   return (
-    <div>
+    <div className={props.name}>
       <Button onClick={props.onClick} active={props.active}>
         {props.name}
       </Button>
