@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "./styles/Button.styled";
 import "./Tab.css";
 
-function Tab(props) {
+export default function Tab(props) {
   return (
     <div>
       <Button onClick={props.onClick} active={props.active}>
@@ -11,5 +11,3 @@ function Tab(props) {
     </div>
   );
 }
-
-export default Tab;

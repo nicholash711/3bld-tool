@@ -1,8 +1,6 @@
-import styled from "styled-components";
-
-export const Container = styled.div`
+.Tabs {
   display: flex;
   flex-direction: row;
   text-align: left;
   padding-top: 10px;
-`;
+}
