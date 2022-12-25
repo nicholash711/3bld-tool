@@ -3,26 +3,42 @@ import React, { Component } from "react";
 export default class PracticeTab extends Component {
   constructor(props) {
     super(props);
-    this.state = { temp: "", value: "" };
+    var temp = sessionStorage.getItem("practiceTemp");
+    var value = sessionStorage.getItem("practiceValue");
+    this.state = {
+      temp: temp === null ? "" : temp,
+      value: value === null ? "" : value,
+    };
   }
 
-  handleOnChange = (event) => {
+  componentWillUnmount() {
+    sessionStorage.setItem("practiceTemp", this.state.temp);
+    sessionStorage.setItem("practiceValue", this.state.value);
+  }
+
+  handleChange = (event) => {
     this.setState({ temp: event.target.value });
   };
 
-  handleOnSubmit = (event) => {
+  handleButton = (event) => {
     this.setState({ value: this.state.temp });
+    this.setState({ temp: "" });
     event.preventDefault();
   };
 
   render() {
     return (
-      <div>
-        <form>
-          <input type="text" onChange={this.handleOnChange} />
-          <input type="button" value="Submit" onClick={this.handleOnSubmit} />
+      <div className="Practice">
+        <form onSubmit={this.handleButton}>
+          <input
+            type="text"
+            onChange={this.handleChange}
+            placeholder="Type Something"
+            value={this.state.temp}
+          />
+          <input type="button" value="Submit" onClick={this.handleButton} />
         </form>
-        The current value is: <font size="6">{this.state.value}</font>
+        Last value inputted is: <font size="6">{this.state.value}</font>
       </div>
     );
   }
