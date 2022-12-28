@@ -3,29 +3,24 @@ import Tab from "./Tab";
 import "./TabContainer.css";
 
 export default function TabContainer({ setCurTab }) {
-  const tabs = [
-    { name: "Practice", key: 0 },
-    { name: "Memorization", key: 1 },
-    { name: "Input", key: 2 },
-    { name: "Options", key: 3 },
-  ];
+  const tabs = ["Solve", "Practice", "Memorize", "Input", "Options"];
 
-  const handleClick = (tab) => {
-    setActive(tab.name);
-    setCurTab(tab.key);
+  const handleClick = (tab, i) => {
+    setActive(tab);
+    setCurTab(i);
   };
 
-  const [active, setActive] = useState(tabs[0].name);
+  const [active, setActive] = useState(tabs[0]);
 
   return (
     <div className="Tabs">
-      {tabs.map((tab) => (
+      {tabs.map((tab, i) => (
         <Tab
-          name={tab.name}
-          key={tab.key}
-          active={active === tab.name}
+          name={tab}
+          key={i}
+          active={active === tab}
           onClick={() => {
-            handleClick(tab);
+            handleClick(tab, i);
           }}
         />
       ))}
