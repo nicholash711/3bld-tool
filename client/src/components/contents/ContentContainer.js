@@ -1,10 +1,10 @@
 import React from "react";
 import "./ContentContainer.css";
-import InputTab from "./Input/InputTab";
-import MemoTab from "./Memo/MemoTab";
-import OptionsTab from "./Options/OptionsTab";
-import PracticeTab from "./Practice/PracticeTab";
-import SolveTab from "./Solve/SolveTab";
+import InputTab from "./input/InputTab";
+import MemoTab from "./memo/MemoTab";
+import OptionsTab from "./options/OptionsTab";
+import PracticeTab from "./practice/PracticeTab";
+import SolveTab from "./solve/SolveTab";
 
 export default function ContentContainer({ curTab }) {
   const content = [

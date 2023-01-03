@@ -1,0 +1,23 @@
+.timer, .solve {
+    height: 100%;
+    outline: none;
+}
+
+.scramble {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.stopwatch {
+    height: 100%;
+    font-size: 200px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 100px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
