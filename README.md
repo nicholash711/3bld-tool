@@ -35,4 +35,6 @@ This tool is designed to help people practice memorization and reduce overall ti
 - add functionality to change preferred orientation of cube
 - add functionality to change preferred lettering of pieces.
 - ? make practice tab adjust to what the person needs ?
+- update README
+- Add any needed targets to Makefile
 
