@@ -13,8 +13,8 @@ app.use("/solves", solves);
 const mongoose = require("mongoose");
 const mongo_host = config.mongo.host;
 const mongo_port = config.mongo.port;
-const db = config.mongo.db;
-const mongo_url = "mongodb://" + mongo_host + ":" + mongo_port + "/" + db;
+const mongo_db = config.mongo.db;
+const mongo_url = "mongodb://" + mongo_host + ":" + mongo_port + "/" + mongo_db;
 mongoose.set("strictQuery", true);
 mongoose.connect(
   mongo_url,
@@ -23,7 +23,7 @@ mongoose.connect(
     if (err) {
       console.log(err);
     } else {
-      console.log(`Connected to database (${db}) at port ${mongo_port}`);
+      console.log(`Connected to database ${mongo_db} at port ${mongo_port}`);
     }
   }
 );
