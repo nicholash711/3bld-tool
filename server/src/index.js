@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const config = require("./config/settings.js");
+const config = require("./config/config.js");
 
 // import routes
 const solves = require("./api/routers/solves");
