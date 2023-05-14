@@ -15,10 +15,13 @@ start-server: .PHONY
 
 ### Docker targets ###
 
-up:
+up: down
 	docker compose up -d
 
-down:
+up-build: down
+	docker compose up --build -d
+
+down: .PHONY
 	docker compose down
 
 

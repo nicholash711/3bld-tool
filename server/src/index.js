@@ -1,7 +1,9 @@
 // create express app
 const express = require("express");
+const cors = require("cors");
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const config = require("./config/settings.js");
 
@@ -11,10 +13,7 @@ app.use("/solves", solves);
 
 // setup mongodb
 const mongoose = require("mongoose");
-const mongo_host = config.mongo.host;
-const mongo_port = config.mongo.port;
-const mongo_db = config.mongo.db;
-const mongo_url = "mongodb://" + mongo_host + ":" + mongo_port + "/" + mongo_db;
+const mongo_url = config.db_url;
 mongoose.set("strictQuery", true);
 mongoose.connect(
   mongo_url,
@@ -23,7 +22,7 @@ mongoose.connect(
     if (err) {
       console.log(err);
     } else {
-      console.log(`Connected to database ${mongo_db} at port ${mongo_port}`);
+      console.log(`Connected to MongoDB database`);
     }
   }
 );

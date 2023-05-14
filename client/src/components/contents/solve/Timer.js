@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { randomScrambleForEvent } from "https://cdn.cubing.net/js/cubing/scramble";
 import Stopwatch from "./Stopwatch";
+import config from "../../../config/config"
 import "./SolveTab.css";
 
 export default function Timer() {
@@ -12,6 +13,8 @@ export default function Timer() {
   const [isDown, setIsDown] = useState(false);
   const [downTime, setDownTime] = useState(0);
   const [allowStart, setAllowStart] = useState(false);
+
+  const api = config.api_url;
 
   // generate a scramble on mount
   useEffect(() => {
@@ -61,7 +64,7 @@ export default function Timer() {
 
   const sendData = (scramble, time) => {
     const data = { scramble: scramble, time: time };
-    fetch("/solves", {
+    fetch(`${api}/solves`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -73,7 +76,7 @@ export default function Timer() {
         console.log(data.message);
       })
       .catch((error) => {
-        console.error("error has occured: " + error);
+        console.error("error has occured:\n" + error);
       });
   };
 
