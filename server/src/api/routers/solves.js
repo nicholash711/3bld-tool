@@ -1,14 +1,18 @@
 const express = require("express");
 let router = express.Router();
 
-let solves = [];
+const Solve = require("../models/index").Solve;
 
 router
   .post("/", (req, res) => {
-    solves.push(req.body);
-    res.send({ message: "received request" });
+    const solve = new Solve(req.body);
+    console.log(solve);
+    solve.save();
+    res.send({ message: "solve saved to database" });
   })
-  .get("/", (req, res) => {
+  .get("/", async (req, res) => {
+    let solves = await Solve.find();
+    console.log(solves);
     res.send({ solves: solves });
   });
 
