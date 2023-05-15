@@ -1,7 +1,10 @@
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+*/node_modules
+*/.pnp
+*/.pnp.js
 
-# data/assets
-/server/data
+# environment variables
+*/.env
+
+# misc
+/.vscode
