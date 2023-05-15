@@ -8,4 +8,4 @@ const solveSchema = new mongoose.Schema({
   time: Number,
 });
 
-  module.exports = mongoose.model("Solve", solveSchema);
+module.exports = mongoose.model("Solve", solveSchema);
