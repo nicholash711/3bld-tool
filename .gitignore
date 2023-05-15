@@ -4,7 +4,7 @@
 */.pnp.js
 
 # environment variables
-*/.env
+.env
 
 # misc
 /.vscode
