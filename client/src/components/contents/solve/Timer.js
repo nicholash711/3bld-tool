@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { randomScrambleForEvent } from "https://cdn.cubing.net/js/cubing/scramble";
 import Stopwatch from "./Stopwatch";
-import config from "../../../config/config"
+import config from "../../../config/config";
 import "./SolveTab.css";
 
 export default function Timer() {
