@@ -6,6 +6,11 @@ const solveSchema = new mongoose.Schema({
     immutable: true,
   },
   time: Number,
+  dateSolved: {
+    type: Date,
+    default: () => Date.now(),
+    immutable: true,
+  },
 });
 
 module.exports = mongoose.model("Solve", solveSchema);

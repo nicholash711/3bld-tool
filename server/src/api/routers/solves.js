@@ -14,6 +14,11 @@ router
     let solves = await Solve.find();
 
     res.send({ solves: solves });
+  })
+  .delete("/:id", async (req, res) => {
+    let id = req.params.id;
+    await Solve.deleteOne({ _id: id });
+    res.send({ solves: await Solve.find() });
   });
 
 module.exports = router;
