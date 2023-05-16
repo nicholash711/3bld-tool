@@ -1,12 +1,14 @@
-import React from "react";
-import Popup from "reactjs-popup";
+import React, { useState } from "react";
+import Modal from "../../basic/Modal";
 
 export default function Solves() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <Popup trigger={<button>trigger</button>} modal nested>
-        <span> Hello </span>
-      </Popup>
+      <button onClick={() => setIsOpen(true)}>Solves</button>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        Some Text
+      </Modal>
     </div>
   );
 }
