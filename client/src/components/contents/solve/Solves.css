@@ -1,0 +1,85 @@
+h1 {
+  margin: 0;
+}
+
+table {
+  display: block;
+  max-height: 500px;
+  overflow: auto;
+}
+
+th {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.view-solves {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.solves-button {
+  background-color: gray;
+  min-height: 60px;
+  min-width: 60px;
+  border-radius: 10px;
+  margin: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.solves-button:hover {
+  background-color: lightgray;
+}
+
+.view-scramble {
+  margin: 0;
+  color: blue;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.view-scramble .tooltip {
+  visibility: hidden;
+  position: absolute;
+  background: beige;
+  border-radius: 5px;
+  transform: translate(-85%, -100%)
+
+}
+
+.view-scramble:hover .tooltip {
+  visibility: visible;
+  
+}
+
+.tooltip {
+  pointer-events: none;
+  padding: 0px 5px 0px;
+  color: black;
+  border-style: solid;
+  border-color: black;
+}
+
+.delete {
+  margin: 0;
+  color: blue;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.view-scramble:hover, .delete:hover {
+  color:rgb(13, 13, 129)
+}

@@ -63,7 +63,7 @@ export default function Timer() {
   };
 
   const sendData = (scramble, time) => {
-    const data = { scramble: scramble, time: time };
+    const data = { scramble: scramble, time: time / 100 };
     fetch(`${api}/solves`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

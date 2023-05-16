@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Button } from "./styles/Button.styled";
 import "./Modal.css";
 
 export default function Modal({ open, onClose, children }) {
@@ -8,7 +9,7 @@ export default function Modal({ open, onClose, children }) {
         <>
           <div className="background" onClick={onClose}></div>
           <div className="modal">
-            <button onClick={onClose}>Close</button>
+            <Button onClick={onClose}>&times;</Button>
             {children}
           </div>
         </>,
