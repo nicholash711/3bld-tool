@@ -54,7 +54,7 @@ td {
   position: absolute;
   background: beige;
   border-radius: 5px;
-  transform: translate(-85%, -100%)
+  transform: translate(-80%, -100%)
 
 }
 
@@ -65,6 +65,7 @@ td {
 
 .tooltip {
   pointer-events: none;
+  font-size: 18px;
   padding: 0px 5px 0px;
   color: black;
   border-style: solid;
